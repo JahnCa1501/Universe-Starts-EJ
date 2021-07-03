@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { Text, StyleSheet, ScrollView, View, Image} from "react-native";
+import { Text, StyleSheet, ScrollView, Image} from "react-native";
 import { Card } from "react-native-elements"
 import { roverPhotos } from '../../api';
 
@@ -22,9 +22,12 @@ const roverImages = ({navigation}) => {
             <Text style={styles.header}>Images</Text>
             {rover && rover.photos.map((image) => {
               return (
-              <View key={image.id}>
+              <Card containerStyle = {styles.CardFile} key={image.id} >
+                <Text style={styles.text} >Day Taken: {image.earth_date}</Text>
+                <Card.Divider/>
                 <Image style={styles.imagewrap} source={image.img_src}/>
-              </View>
+              </Card>
+
               );
             })}
         </ScrollView>
@@ -39,9 +42,7 @@ const styles = StyleSheet.create({
     }, 
 
     imagewrap: {
-        margin: 10,
-        padding: 2,
-        height: 200,
+        height: 250,
         width: "center",
     },
 
@@ -51,6 +52,14 @@ const styles = StyleSheet.create({
         fontSize: 30,
         textAlign: "center",
       },
+
+    CardFile: {
+        backgroundColor: "#d8c293",
+    },
+
+     text: {
+       fontSize: 20,
+     }
   });
 
 export default roverImages;

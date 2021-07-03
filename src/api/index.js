@@ -38,3 +38,17 @@ export const nasaApod = async () => {
 
    return data;
 }
+
+
+   const api2 = "https://eonet.sci.gsfc.nasa.gov/";
+export const event = async () => {
+   const endpoint = `${api2}api/v2.1/events?days=2`;
+
+   //Realizar la peticion a la api
+   const response = await fetch(endpoint);
+   const data = await response.json();
+
+   console.log(data);
+
+   return data;
+};

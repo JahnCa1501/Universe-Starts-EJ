@@ -31,6 +31,17 @@ const Home = ({navigation}) => {
         onPress = {() => navigation.navigate('MRP')}/>
         </Card.Image>
       </Card>
+
+      <Card>
+        <Card.Image source={require('../imagenes/nasaimag.jpg')}>
+        <Button 
+        buttonStyle={{borderRadius:0 , marginLeft: 0, marginRight: 0}}
+        title="Natural Events"
+        onPress = {() => navigation.navigate('NE')}/>
+        </Card.Image>
+      </Card>
+
+
       </ScrollView>
     );
 };

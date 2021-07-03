@@ -16,7 +16,7 @@ const Apod = ({navigation}) => {
       getApod();
     }, []);
 
-    if(!apod) return 
+
 
     return ( 
       <ScrollView>

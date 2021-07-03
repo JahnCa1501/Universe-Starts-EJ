@@ -13,7 +13,7 @@ today = `${yyyy}-${mm}-${dd}`;
 
 const neoN = ({navigation}) => {
 
-  console.log(today);
+ 
     const [neo, setNeo] = useState({});
 
     const getNeo= async () => {
@@ -30,7 +30,7 @@ const neoN = ({navigation}) => {
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Today near Objects: {neo.element_count}</Text>
           {neo.element_count &&
-            neo.near_earth_objects['2021-06-30'].map((asteroid) => {
+            neo.near_earth_objects['2021-07-02'].map((asteroid) => {
             return (
             <Card key = {asteroid.id}> 
             <Text style={styles.textheader}>{asteroid.name}</Text>
