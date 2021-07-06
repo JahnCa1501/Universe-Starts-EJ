@@ -28,7 +28,7 @@ export const nasaApod = async () => {
 
  export const roverPhotos = async () => {
 
-    const endpoint = `${api}mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=VWggYB9qMo71gJQighU4xx19dPVghXdTwRhm9ZhU`;
+    const endpoint = `${api}mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=VWggYB9qMo71gJQighU4xx19dPVghXdTwRhm9ZhU`;
 
     //Realizar la peticion a la api
    const response = await fetch(endpoint);
@@ -40,9 +40,10 @@ export const nasaApod = async () => {
 }
 
 
-   const api2 = "https://eonet.sci.gsfc.nasa.gov/";
+const api2 = "https://eonet.sci.gsfc.nasa.gov/";
+
 export const event = async () => {
-   const endpoint = `${api2}api/v2.1/events?days=2`;
+   const endpoint = `${api2}api/v2.1/events?days=5`;
 
    //Realizar la peticion a la api
    const response = await fetch(endpoint);

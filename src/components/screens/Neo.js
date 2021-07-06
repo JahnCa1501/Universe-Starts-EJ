@@ -4,16 +4,8 @@ import { Text, StyleSheet, ScrollView } from "react-native";
 import { Card } from "react-native-elements"
 import { neoNasa } from '../../api';
 
-let today = new Date();
-let yyyy = today.getFullYear();
-let mm = '0' + (today.getMonth() + 1);
-let dd = today.getDate();
-
-today = `${yyyy}-${mm}-${dd}`;
-
 const neoN = ({navigation}) => {
 
- 
     const [neo, setNeo] = useState({});
 
     const getNeo= async () => {
@@ -42,8 +34,7 @@ const neoN = ({navigation}) => {
             );
           })}
       </ScrollView>
-    )
-    
+    ) 
 }
 
 const styles = StyleSheet.create({

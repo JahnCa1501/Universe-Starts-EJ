@@ -19,14 +19,13 @@ const roverImages = ({navigation}) => {
 
     return(
         <ScrollView style={styles.container}>
-            <Text style={styles.header}>Images</Text>
+            <Text style={styles.header}>Surface images</Text>
             {rover && rover.photos.map((image) => {
               return (
               <Card containerStyle = {styles.CardFile} key={image.id} >
                 <Image style={styles.imagewrap} source={image.img_src}/>
                 <Text>Day Taken: {image.earth_date}</Text>
               </Card>
-
               );
             })}
         </ScrollView>

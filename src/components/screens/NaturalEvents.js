@@ -3,8 +3,6 @@ import { Text, StyleSheet, ScrollView} from "react-native";
 import { event } from '../../api';
 import { Card } from "react-native-elements"
 
-
-
 const Naturalevent = ({navigation}) => {
     const [data, setdata] = useState(null);
 
@@ -20,13 +18,13 @@ const Naturalevent = ({navigation}) => {
 
     return(
       <ScrollView style={styles.container}>
-            <Text style ={styles.header}>EONET Events</Text>
-            <Text style ={styles.text}>Natural Events from EONET</Text>
-          {data && data.events.map((eonet)=> {
+        <Text style ={styles.header}>EONET Events</Text>
+         <Text style ={styles.text}>Natural Events from EONET</Text>
+           {data && data.events.map((eonet)=> {
             return (
               <Card containerStyle = {styles.card} key ={eonet.id}>
                 <Text style ={styles.Cardtitle}>{eonet.title}</Text>
-              <Text>EVENT ID: {eonet.id}</Text>
+                <Text>EVENT ID: {eonet.id}</Text>
               </Card>
             )
           })}
@@ -51,7 +49,6 @@ const styles = StyleSheet.create({
       fontSize: 15,
       fontWeight: "bold",
       textAlign: "center",
-
   },
 
   card: {

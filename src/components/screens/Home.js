@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button, Card } from "react-native-elements";
-import { ScrollView, StyleSheet, TouchableOpacity,  Text } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 const Home = ({navigation}) => {
     return ( 
