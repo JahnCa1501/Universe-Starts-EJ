@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Button, Card } from "react-native-elements";
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, TouchableOpacity,  Text } from 'react-native';
 
 const Home = ({navigation}) => {
     return ( 
       <ScrollView style={styles.container}>
-      <Card>
+      <Card containerStyle = {styles.card}>
         <Card.Image source={require('../imagenes/Galaxia.png')}>
         <Button 
         buttonStyle={{borderRadius:0 , marginLeft: 0, marginRight: 0}}
@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
         </Card.Image>
       </Card>
 
-      <Card>
+      <Card containerStyle = {styles.card}>
         <Card.Image source={require('../imagenes/Neo.jpg')}>
         <Button 
         buttonStyle={{borderRadius:0 , marginLeft: 0, marginRight: 0}}
@@ -23,7 +23,7 @@ const Home = ({navigation}) => {
         </Card.Image>
       </Card>
 
-      <Card>
+      <Card containerStyle = {styles.card}>
         <Card.Image source={require('../imagenes/MarsRover.webp')}>
         <Button 
         buttonStyle={{borderRadius:0 , marginLeft: 0, marginRight: 0}}
@@ -32,7 +32,7 @@ const Home = ({navigation}) => {
         </Card.Image>
       </Card>
 
-      <Card>
+      <Card containerStyle = {styles.card}>
         <Card.Image source={require('../imagenes/nasaimag.jpg')}>
         <Button 
         buttonStyle={{borderRadius:0 , marginLeft: 0, marginRight: 0}}
@@ -51,6 +51,18 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 10,
     backgroundColor: "#227cb2"
+  },
+
+  card: {
+    backgroundColor: "#d8c293"
+  },
+
+  header: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 30,
+    textAlign: "center",
+    margin: 5
   },
 });
 

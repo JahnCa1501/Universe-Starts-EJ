@@ -14,7 +14,7 @@ export default function App(){
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} options={{ title: "UNIVERSE STARTS EJ"}}/>
+        <Stack.Screen name="Home" component={Home} options={{ title: "UNIVERSE STARTS EJ", headerTitleAlign: "center", headerTitleStyle: { fontWeight: 'bold'}}}/>
         <Stack.Screen name="APOD" component={Apod} options={{ title: "Astronomic Picture of the day"}}/>
         <Stack.Screen name="NEO" component={Neo} options={{ title: "Near Earth Object"}}/>
         <Stack.Screen name="MRP" component={MarsRover} options={{ title: "Mars Rover Photos"}}/>

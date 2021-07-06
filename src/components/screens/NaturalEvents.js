@@ -24,17 +24,14 @@ const Naturalevent = ({navigation}) => {
             <Text style ={styles.text}>Natural Events from EONET</Text>
           {data && data.events.map((eonet)=> {
             return (
-              <Card key ={eonet.id}>
+              <Card containerStyle = {styles.card} key ={eonet.id}>
                 <Text style ={styles.Cardtitle}>{eonet.title}</Text>
               <Text>EVENT ID: {eonet.id}</Text>
               </Card>
             )
           })}
         </ScrollView>
-
-      
     )
-  
 }
 
 const styles = StyleSheet.create({
@@ -55,6 +52,10 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       textAlign: "center",
 
+  },
+
+  card: {
+    backgroundColor: "#d8c293",
   },
   
    text: {

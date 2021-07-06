@@ -30,14 +30,14 @@ const neoN = ({navigation}) => {
       <ScrollView style={styles.container}>
         <Text style={styles.header}>Today near Objects: {neo.element_count}</Text>
           {neo.element_count &&
-            neo.near_earth_objects['2021-07-02'].map((asteroid) => {
+            neo.near_earth_objects['2021-07-06'].map((asteroid) => {
             return (
-            <Card key = {asteroid.id}> 
+            <Card containerStyle = {styles.card} key = {asteroid.id}> 
             <Text style={styles.textheader}>{asteroid.name}</Text>
-            <Text>Asteroid ID: {asteroid.id} </Text>
-            <Text>Miss distance: {asteroid.close_approach_data[0].miss_distance.kilometers} Km from Earth</Text>
-            <Text>Asteroid's Size: {asteroid.estimated_diameter.meters.estimated_diameter_max} meters</Text>
-            <Text>Speed: {asteroid.close_approach_data[0].relative_velocity.kilometers_per_hour} Kmh</Text>
+            <Text style={styles.text}>Asteroid ID: {asteroid.id} </Text>
+            <Text style={styles.text}>Miss distance: {asteroid.close_approach_data[0].miss_distance.kilometers} Km from Earth</Text>
+            <Text style={styles.text}>Asteroid's Size: {asteroid.estimated_diameter.meters.estimated_diameter_max} meters</Text>
+            <Text style={styles.text}>Speed: {asteroid.close_approach_data[0].relative_velocity.kilometers_per_hour} Kmh</Text>
             </Card>
             );
           })}
@@ -64,6 +64,15 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       fontSize: 15,
       textAlign: "center",
+      color: "white"
+    },
+
+    text: {
+      color: "white",
+    },
+
+    card: {
+      backgroundColor: "#227cb2",
     }
   });
 

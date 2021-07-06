@@ -23,9 +23,8 @@ const roverImages = ({navigation}) => {
             {rover && rover.photos.map((image) => {
               return (
               <Card containerStyle = {styles.CardFile} key={image.id} >
-                <Text style={styles.text} >Day Taken: {image.earth_date}</Text>
-                <Card.Divider/>
                 <Image style={styles.imagewrap} source={image.img_src}/>
+                <Text>Day Taken: {image.earth_date}</Text>
               </Card>
 
               );
@@ -37,7 +36,6 @@ const roverImages = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      padding: 10,
       backgroundColor: "#011a49",
     }, 
 
@@ -56,10 +54,6 @@ const styles = StyleSheet.create({
     CardFile: {
         backgroundColor: "#d8c293",
     },
-
-     text: {
-       fontSize: 20,
-     }
   });
 
 export default roverImages;

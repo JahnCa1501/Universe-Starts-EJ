@@ -16,15 +16,13 @@ const Apod = ({navigation}) => {
       getApod();
     }, []);
 
-
-
     return ( 
       <ScrollView>
       <View style={styles.container}>
-        <Text style={styles.header}>{apod.title}</Text> 
-        <Text style={styles.text}>Date: {apod.date}</Text>
+        <Text style={styles.header}>{apod.title}</Text>
+        <Text style={styles.date}>Date: {apod.date}</Text>
         <Image style={styles.image} source={apod.url} />
-          <Text style={styles.text}>{apod.explanation}</Text>
+        <Text style={styles.text}>{apod.explanation}</Text>
       </View>
       </ScrollView>
     );
@@ -39,6 +37,7 @@ const styles = StyleSheet.create({
   
   text: {
     color: "white",
+    margin: 4,
   },
 
   header: {
@@ -46,11 +45,17 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 30,
     textAlign: "center",
+    margin: 5
   },
 
   image: {
     width: "center",
     height: 400,
+  },
+
+  date: {
+    color: "white",
+    margin: 5
   },
 });
 
